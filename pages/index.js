@@ -18,12 +18,11 @@ export default function Home() {
     );
   }, []);
 
+  console.log(token);
+
   return (
     <div className={styles.container}>
-      {token &&
-        token.map((chain) => {
-          return <p>{chain.chain}</p>;
-        })}
+      <p>{JSON.stringify(token)}</p>
     </div>
   );
 }
